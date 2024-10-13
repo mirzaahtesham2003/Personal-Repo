@@ -96,6 +96,197 @@
           }
         }
       }
+    },
+    "user-management": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/user-management",
+      "sourceRoot": "projects/user-management/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/user-management",
+            "index": "projects/user-management/src/index.html",
+            "browser": "projects/user-management/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/user-management/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/user-management/public"
+              }
+            ],
+            "styles": [
+              "projects/user-management/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/user-management/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/user-management/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "user-management:build:production"
+            },
+            "development": {
+              "buildTarget": "user-management:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/user-management/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/user-management/public"
+              }
+            ],
+            "styles": [
+              "projects/user-management/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "admin-access": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/admin-access",
+      "sourceRoot": "projects/admin-access/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/admin-access",
+            "index": "projects/admin-access/src/index.html",
+            "browser": "projects/admin-access/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/admin-access/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/admin-access/public"
+              }
+            ],
+            "styles": [
+              "projects/admin-access/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/admin-access/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/admin-access/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "admin-access:build:production"
+            },
+            "development": {
+              "buildTarget": "admin-access:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/admin-access/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/admin-access/public"
+              }
+            ],
+            "styles": [
+              "projects/admin-access/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "f443dbd8-69dc-40a8-90a9-5539be4e4c35"
   }
 }
