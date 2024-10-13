@@ -1,0 +1,30 @@
+
+Step 1 : ng new erp-workspace --create-application=false
+Step 2 : ng generate application user-management/ inventory-management
+Step 3 : ng generate component login/ sign-up / user-profile
+
+erp-workspace/
+  ├── projects/
+  │   ├── user-management/          Application
+  │   │   ├── src/
+  │   │   │   ├── app/
+  │   │   │   │   ├── login/        Component
+  │   │   │   │   ├── sign-up/
+  │   │   │   │   ├── user-profile/
+  │   ├── inventory-management/     Application
+  │   │   ├── src/
+  │   │   │   ├── app/
+  │   │   │   │   ├── inventory-list/
+  │   │   │   │   ├── inventory-details/
+  ├── angular.json
+  ├── package.json
+  ├── tsconfig.json
+
+
+
+Command : ng new workspace_name --create-application=false
+the extended flag is used to create an empty application witch no default configuration.
+we can set it up later if we want with command. Command : ng generate application app_name
+
+
+
