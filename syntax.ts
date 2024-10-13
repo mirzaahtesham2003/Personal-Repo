@@ -24,6 +24,31 @@ enum direction {
     left = -2
 }
 
+//Declaring a class
+
+class familyMembers {
+    name !: string;
+    age !: number;
+    #device !: string;
+    profession !: string;
+
+    constructor(name:string, age:number, device:string, profession:string ){
+        this.name = name;
+        this.age = age;
+        this.#device = device;
+        this.profession = profession;
+    }
+
+    printDataOfObject(){
+        console.log(this.name);
+    }
+
+}
+
+let person1= new familyMembers('Mirza Ahtesham Baig',21, 'IdeaPad 5, 2 in 1', 'Software Enggineer');
+
+
+
 //In Filter function when passed an array, it filters out vales for which it is true 
 let passSubjects: number[] = marks.filter((marks)=>{ return marks >= 40;});
 
@@ -95,4 +120,4 @@ console.log(`add1 = ${add1(1,2,3)}`);
 console.log(`add2 = ${add2(1,2)}`);
 console.log(`add2 = ${add2(1,2,3)}`);
 console.log(`add3 = ${add3(1,2,3,4,5,6,7,8,9)}`); //Or can be passed : add3(1,2, ...[3,4,5,6,7,8,9])
-
+console.log(person1);
