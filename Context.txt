@@ -23,8 +23,26 @@ erp-workspace/
 
 
 Command : ng new workspace_name --create-application=false
+
 the extended flag is used to create an empty application witch no default configuration.
 we can set it up later if we want with command. Command : ng generate application app_name
+
+
+app.module.ts
+In ng -v 17, the "app.module.ts" file is not created bc in this version standalone will be true by default.
+Standalone components allow you to create Angular components without needing to declare them in a module. 
+This simplifies the structure and makes it easier to manage and reuse components.
+
+
+
+MonoRepo : 
+Having multiple application/libraries, like user-acces/admin-access etc...
+
+
+
+ng serve
+ng serve --o
+ng serve --port 4200
 
 
 
