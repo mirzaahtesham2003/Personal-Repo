@@ -45,4 +45,8 @@ ng serve --o
 ng serve --port 4200
 
 
+interpolation
+property Binding
+
+events, [(ngModel)]
 
