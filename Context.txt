@@ -44,9 +44,19 @@ ng serve
 ng serve --o
 ng serve --port 4200
 
+For one way data binding 
+interpolation           .ts --> .html
+property Binding        .ts --> .html
+events                  .html --> .ts
 
-interpolation
-property Binding
+Two way data binding    .html <<-->> .ts    **Only for form elements**
+import FormsModule in .ts 
+[(ngModel)] = "var-name-in-ts"
 
-events, [(ngModel)]
+Signal()
+
+DIRECTIVES
+*ngif="true/false"
+True --> Execute
+False --> Remove Element
 
