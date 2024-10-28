@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from '../../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-    username: string = '';
-    password: string = '';
-
-    login(){
-      alert(`Hi ${this.username} this project is under development.`);
-    }
+    
 
 }

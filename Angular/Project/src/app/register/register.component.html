@@ -1,0 +1,84 @@
+<div class="containerDiv">
+    <div class="outerDiv">
+        <div *ngIf="divOne" id="div1" class="box" [ngClass]="colorDiv" >
+          <p>Div 1</p>
+        </div>
+        <button id="btn1" (click)='divOneTrue()'>show</button>
+        <button id="btn2" (click)='divOneFalse()'>hide</button>
+        <button (click)="changeColorRed()">Red Color</button>
+        <button (click)="changeColorBlue()">Blue Color</button>
+    </div>
+
+    <div class="outerDiv">
+    <div id="div2" class="box" *ngIf="divTwo">
+      <p>Div 2</p>
+    </div>
+    <button id="btn3" (click)='divTwoToggle()'>Toggle</button>
+    </div>
+
+    <div class="outerDiv">
+    <div id="div3" class="box" *ngIf="divThreeSame()">
+      <p>Div 3</p>
+    </div>
+    <input type="number" [(ngModel)]="num1">
+    <input type="number" [(ngModel)]="num2">
+    </div>
+
+    <div class="outerDiv">
+    <div id="div4" class="box" *ngIf="divFour">
+      <p>Div 4</p>
+    </div>
+    <input type="checkbox" [(ngModel)]="divFour">
+    <select [(ngModel)]="divFour">
+        <option [ngValue]="true">Yes</option>
+        <option [ngValue]="false">No</option>
+    </select>
+    </div>
+</div>
+
+<div class="container">
+
+    <div>
+        <h3>State</h3>
+    <p>Passed an array of states using *ngFor direvtive</p>
+    <ul>
+        <li *ngFor="let state of states">{{state}}</li>
+    </ul>
+    </div>
+
+    <div>
+        <h4>City</h4>
+    <select>
+        <option *ngFor="let city of cities">{{city}}</option>
+    </select>
+    </div>
+
+    <div>
+        <h4>List using *ngFor</h4>
+         <table>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>age</th>
+                    <th>Profession</th>
+                    <th>Marriage Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let student of studentList; let rno = index">
+                    <td>{{rno+1}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.PhNo}}</td>
+                    <td>{{student.age}}</td>
+                    <td>{{student.profession}}</td>
+                    <td *ngIf="student.married">Married</td>
+                    <td *ngIf="!student.married">Single</td>
+                </tr>
+            </tbody>
+         </table>
+    </div>
+
+</div>
